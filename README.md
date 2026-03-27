@@ -8,6 +8,7 @@ The core hypothesis is that "easy" tokens (common stopwords, contextually obviou
 
 ## Usage
 *   **For model, training, inference code:** please check MoRBERT.ipynb in the repo
+*   **Model's checkpoint @ 600T**: can be accessed [here](https://huggingface.co/gbyuvd/Mo2BERTa-proto)
 *   **For updated version addressing the limitation of for-loop calls and context isolation**: see [Mo²BERTa-v2-proto](https://huggingface.co/gbyuvd/Mo2BERTa-v2-proto)
 
 ## Model Details
