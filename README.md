@@ -9,7 +9,7 @@ The core hypothesis is that "easy" tokens (common stopwords, contextually obviou
 ## Usage
 *   **For model, training, inference code:** please check MoRBERT.ipynb in the repo
 *   **Model's checkpoint @ 600T**: can be accessed [here](https://huggingface.co/gbyuvd/Mo2BERTa-proto)
-*   **For updated version addressing the limitation of for-loop calls and context isolation**: see [Mo²BERTa-v2-proto](https://huggingface.co/gbyuvd/Mo2BERTa-v2-proto)
+*   **For updated version addressing the limitation of for-loop calls and context isolation**: see [Mo²BERTa-v2-proto](https://github.com/gbyuvd/Mo2BERTa-v2-proto)
 
 ## Model Details
 | Field                 | Value                                                                                              |
@@ -253,18 +253,18 @@ The model is trained exclusively on TinyStories-valid, a synthetic dataset of si
 ## Known TODOs / Future Work
 
 **Architecture**
-- [x] Frozen-KV variant: exited tokens contribute KV but skip Q projection  -> [Mo²BERTa-v2-proto](https://huggingface.co/gbyuvd/Mo2BERTa-v2-proto)
+- [x] Frozen-KV variant: exited tokens contribute KV but skip Q projection  -> [Mo²BERTa-v2-proto](https://github.com/gbyuvd/Mo2BERTa-v2-proto)
 - [ ] Test token-choice routing variant for comparison
 
 **Performance**
 - [ ] Replace Python gather-scatter loop with variable-length FlashAttention kernel 
-  - [x] We can't do this at the time being, but decided to do padded batched SDPA   -> [Mo²BERTa-v2-proto](https://huggingface.co/gbyuvd/Mo2BERTa-v2-proto)
+  - [x] We can't do this at the time being, but decided to do padded batched SDPA   -> [Mo²BERTa-v2-proto](https://github.com/gbyuvd/Mo2BERTa-v2-proto)
 - [ ] Benchmark wall-clock throughput vs. dense baseline after optimization
 
 **Experiments**
 - [x] 600 TFLOP final PoC run
 - [x] 100 TFLOP run with optimized model
-- [x] 600 TFLOP run with optimized model and baselines -> [Mo²BERTa-v2-proto](https://huggingface.co/gbyuvd/Mo2BERTa-v2-proto)
+- [x] 600 TFLOP run with optimized model and baselines -> [Mo²BERTa-v2-proto](https://github.com/gbyuvd/Mo2BERTa-v2-proto)
 - [ ] LR schedule matching (trapezoidal warmup-decay per paper)
 - [ ] Scale up: larger model size, fuller dataset
 
